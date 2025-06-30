@@ -18,7 +18,7 @@
         .checked-icon::before {
             content: "\2713"; /* Unicode for a check mark */
             color: #10B981; /* Green color */
-            font-size: 1.25rem; /* Adjust font size to fit well */
+            font-size: 1.1rem; /* Adjusted font size to fit well with smaller text */
             font-weight: bold;
         }
 
@@ -31,89 +31,89 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 font-sans">
     <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-2xl">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Learning Outcomes</h1>
-        <p class="text-lg text-gray-700 mb-8">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Learning Outcomes</h1>
+        <p class="text-base text-gray-700 mb-8">
             By completing HLSTSTE003 – Sterilise Loads, you will be able to:
         </p>
 
-        <ul class="space-y-4">
+        <ul class="space-y-3">
             <!-- Learning Outcome 1 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome1" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome1" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome1" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Follow established procedures for preparing, operating, loading, and unloading sterilisers based on national standards.</span>
                 </label>
             </li>
             <!-- Learning Outcome 2 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome2" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome2" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome2" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Interpret test results accurately to ensure effective sterilisation cycles.</span>
                 </label>
             </li>
             <!-- Learning Outcome 3 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome3" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome3" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome3" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Complete documentation meticulously for cycles, tests, and load contents, including specialised items.</span>
                 </label>
             </li>
             <!-- Learning Outcome 4 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome4" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome4" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome4" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Adhere to work health and safety, infection control, and manual handling requirements.</span>
                 </label>
             </li>
             <!-- Learning Outcome 5 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome5" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome5" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome5" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Identify and resolve routine problems within delegated authority.</span>
                 </label>
             </li>
             <!-- Learning Outcome 6 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome6" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome6" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome6" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Understand sterilisation terminology and methods used in Australia.</span>
                 </label>
             </li>
             <!-- Learning Outcome 7 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome7" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome7" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome7" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Manage environmental conditions crucial for efficient sterilisation, including quarantine protocols.</span>
                 </label>
             </li>
             <!-- Learning Outcome 8 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome8" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome8" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome8" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Implement cleaning protocols and special requirements for sterilisers, trolleys, and carriages.</span>
                 </label>
             </li>
             <!-- Learning Outcome 9 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome9" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome9" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome9" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Recognise factors influencing sterilisation outcomes, such as cycle stages and physical parameters.</span>
                 </label>
             </li>
             <!-- Learning Outcome 10 -->
             <li class="flex items-start">
                 <input type="checkbox" id="outcome10" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome10" class="flex items-center cursor-pointer text-gray-900 text-lg flex-grow">
-                    <span class="checkbox-custom w-6 h-6 border-2 border-gray-400 rounded-md flex-shrink-0 mr-3"></span>
+                <label for="outcome10" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
+                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
                     <span class="outcome-text">Utilise monitoring equipment and procedures effectively to ensure sterilisation quality and safety.</span>
                 </label>
             </li>
