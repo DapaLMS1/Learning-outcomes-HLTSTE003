@@ -3,146 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Outcomes Activity</title>
+    <title>What You Will Learn - Checklist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for the checkbox container */
-        .checkbox-custom {
-            display: flex; /* Use flexbox to center content */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            transition: all 0.2s ease-in-out; /* Smooth transition for state changes */
-        }
-
-        /* Custom styles for the green tick icon when checked */
-        .checked-icon::before {
-            content: "\2713"; /* Unicode for a check mark */
-            color: #10B981; /* Green color */
-            font-size: 1.1rem; /* Adjusted font size to fit well with smaller text */
-            font-weight: bold;
-        }
-
-        /* Style for the strikethrough text */
-        .strikethrough {
+        /* Custom checkbox styling for a cleaner look */
+        input[type="checkbox"]:checked + div span.title {
             text-decoration: line-through;
-            color: #6B7280; /* Gray out text */
+            color: #9ca3af; /* Tailwind text-gray-400 */
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 font-sans">
-    <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-2xl">
-        <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Learning Outcomes</h1>
-        <p class="text-base text-gray-700 mb-8">
-            By completing HLSTSTE003 – Sterilise Loads, you will be able to:
-        </p>
+<body class="bg-slate-50 min-h-screen p-4 font-sans">
 
-        <ul class="space-y-3">
-            <!-- Learning Outcome 1 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome1" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome1" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Follow established procedures for preparing, operating, loading, and unloading sterilisers based on national standards.</span>
-                </label>
-            </li>
-            <!-- Learning Outcome 2 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome2" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome2" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Interpret test results accurately to ensure effective sterilisation cycles.</span>
-                </label>
-            </li>
-            <!-- Learning Outcome 3 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome3" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome3" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Complete documentation meticulously for cycles, tests, and load contents, including specialised items.</span>
-                </label>
-            </li>
-            <!-- Learning Outcome 4 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome4" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome4" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Adhere to work health and safety, infection control, and manual handling requirements.</span>
-                </label>
-            </li>
-            <!-- Learning Outcome 5 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome5" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome5" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Identify and resolve routine problems within delegated authority.</span>
-                </label>
-            </li>
-            <!-- Learning Outcome 6 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome6" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome6" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Understand sterilisation terminology and methods used in Australia.</span>
-                </label>
-            </li>
-            <!-- Learning Outcome 7 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome7" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome7" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Manage environmental conditions crucial for efficient sterilisation, including quarantine protocols.</span>
-                </label>
-            </li>
-            <!-- Learning Outcome 8 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome8" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome8" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Implement cleaning protocols and special requirements for sterilisers, trolleys, and carriages.</span>
-                </label>
-            </li>
-            <!-- Learning Outcome 9 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome9" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome9" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Recognise factors influencing sterilisation outcomes, such as cycle stages and physical parameters.</span>
-                </label>
-            </li>
-            <!-- Learning Outcome 10 -->
-            <li class="flex items-start">
-                <input type="checkbox" id="outcome10" class="hidden" onchange="toggleOutcome(this)">
-                <label for="outcome10" class="flex items-center cursor-pointer text-gray-900 text-base flex-grow">
-                    <span class="checkbox-custom w-5 h-5 border-2 border-gray-400 rounded-md flex-shrink-0 mr-2"></span>
-                    <span class="outcome-text">Utilise monitoring equipment and procedures effectively to ensure sterilisation quality and safety.</span>
-                </label>
-            </li>
-        </ul>
+    <div class="bg-white rounded-xl shadow border border-slate-100 p-4 sm:p-6 w-full">
+        
+        <div class="border-b border-slate-200 pb-3 mb-4">
+            <h1 class="text-xl sm:text-2xl font-bold text-slate-800 tracking-tight">What You Will Learn</h1>
+            <p class="text-slate-500 mt-1 text-sm">Upon successful completion of this unit, you will be able to:</p>
+            <p class="text-blue-700 bg-blue-50 px-3 py-2 rounded-md mt-3 text-sm font-medium inline-block border border-blue-100">
+                💡 Check each box as you read through the list below.
+            </p>
+        </div>
+
+        <div class="space-y-2">
+            
+            <!-- Item 1 -->
+            <label class="flex items-start gap-3 cursor-pointer group p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                <div class="pt-0.5">
+                    <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer">
+                </div>
+                <div>c
+                    <span class="title block font-semibold text-slate-800 transition-colors">Prepare Sterilisation Equipment</span>
+                    <span class="block text-slate-600 text-sm mt-0.5 leading-relaxed">Perform routine cleaning and execute essential performance testing, such as Bowie-Dick or helix tests.</span>
+                </div>
+            </label>
+
+            <!-- Item 2 -->
+            <label class="flex items-start gap-3 cursor-pointer group p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                <div class="pt-0.5">
+                    <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer">
+                </div>
+                <div>
+                    <span class="title block font-semibold text-slate-800 transition-colors">Load Sterilisers</span>
+                    <span class="block text-slate-600 text-sm mt-0.5 leading-relaxed">Select and apply the correct loading methods and tray configurations in strict accordance with RMD manufacturer instructions.</span>
+                </div>
+            </label>
+
+            <!-- Item 3 -->
+            <label class="flex items-start gap-3 cursor-pointer group p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                <div class="pt-0.5">
+                    <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer">
+                </div>
+                <div>
+                    <span class="title block font-semibold text-slate-800 transition-colors">Operate Sterilisation Equipment</span>
+                    <span class="block text-slate-600 text-sm mt-0.5 leading-relaxed">Monitor critical cycle parameters and safely respond to operational faults within your defined scope of practice.</span>
+                </div>
+            </label>
+
+            <!-- Item 4 -->
+            <label class="flex items-start gap-3 cursor-pointer group p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                <div class="pt-0.5">
+                    <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer">
+                </div>
+                <div>
+                    <span class="title block font-semibold text-slate-800 transition-colors">Unload and Release Loads</span>
+                    <span class="block text-slate-600 text-sm mt-0.5 leading-relaxed">Execute parametric release procedures, verify chemical and biological indicators, and apply proper cooling protocols.</span>
+                </div>
+            </label>
+
+            <!-- Item 5 -->
+            <label class="flex items-start gap-3 cursor-pointer group p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                <div class="pt-0.5">
+                    <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer">
+                </div>
+                <div>
+                    <span class="title block font-semibold text-slate-800 transition-colors">Manage Quality Assurance</span>
+                    <span class="block text-slate-600 text-sm mt-0.5 leading-relaxed">Oversee record retention, handle incident management protocols, and understand the requirements for annual Performance Qualification (PQ).</span>
+                </div>
+            </label>
+
+        </div>
     </div>
 
-    <script>
-        // JavaScript function to handle the checkbox change
-        function toggleOutcome(checkbox) {
-            // Get the parent label element
-            const label = checkbox.nextElementSibling;
-            // Get the custom checkbox span and the outcome text span
-            const customCheckbox = label.querySelector('.checkbox-custom');
-            const outcomeText = label.querySelector('.outcome-text');
-
-            if (checkbox.checked) {
-                // Add classes for green tick and strikethrough
-                customCheckbox.classList.add('checked-icon');
-                customCheckbox.classList.add('bg-white'); // Ensure background is white for the tick
-                customCheckbox.classList.remove('border-gray-400'); // Remove default border
-                outcomeText.classList.add('strikethrough');
-            } else {
-                // Remove classes if unchecked
-                customCheckbox.classList.remove('checked-icon');
-                customCheckbox.classList.remove('bg-white'); // Remove background
-                customCheckbox.classList.add('border-gray-400'); // Restore default border
-                outcomeText.classList.remove('strikethrough');
-            }
-        }
-    </script>
 </body>
 </html>
